@@ -1,0 +1,23 @@
+﻿@model IdentityTeste4.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Logado";
+}
+
+<div class="container">
+    <h3>@User.Identity.Name , bem vindo</h3>
+    <hr />
+    <div class="row">
+        <ul>
+            @foreach (var item in User.Claims)
+            {
+                <li><b>@item.Type</b>: @item.Value</li>
+            }
+        </ul>
+        
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
