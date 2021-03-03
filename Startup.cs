@@ -30,7 +30,7 @@ namespace IdentityTeste4
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = @"Data Source=NOTEBOOK\DBLEMOSINFOTEC;Initial Catalog=DbBarbearia;User ID=sa;Password=@Lemos318730";
+            var connectionString = @"Data Source=NOTEBOOK\DBLEMOSINFOTEC;Initial Catalog=YourDatabase;User ID=yourUser;Password=your password";
 
             var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
